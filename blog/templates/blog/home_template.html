@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <div class="title">
+        <h1 class="welcome_title">
+            Welcome{% if user %}, {{ user.username }} {% endif %}
+        </h1>
+    </div>
+
+    <p>Hi, this is test blog site, dedicated Web developing, check out posts!</p>
+    {% include "blog/get_posts.html" %}
+{% endblock %}

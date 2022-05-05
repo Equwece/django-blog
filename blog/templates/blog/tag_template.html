@@ -1,0 +1,7 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <div class="title">
+        <h1 class="welcome_title">Tag: {{ tag_title }}</h1>
+    </div>
+    {% include "blog/get_posts.html" %}
+{% endblock %}

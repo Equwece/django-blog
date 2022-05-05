@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<a href="{% url 'create_tag' %}" class="create_tag">Create tag</a>
+{% for tag in tags %}
+    <ul>
+        <li>
+            <div class="tag_list">          
+                <a href="{% url 'show_tag' tag.url %}">{{ tag.title }}</a>
+                <div class="action_block">
+                    <a href="{% url 'edit_tag' tag.url %}">Edit</a>
+                    <a href="{% url 'delete_tag' tag.url %}">Delete</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+{% endfor %}
+
+{% endblock %}

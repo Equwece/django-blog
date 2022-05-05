@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<form action="" method="post" class="create_form">
+    {% csrf_token %}
+    {{ form }}
+    
+    {% for tag in tags %}
+        <div class="checkbox_wrapper">
+            <input type="checkbox" name="{{ tag.title }}" {% if tag in post_tags %}checked{% endif %}>
+            {{ tag.title }}
+        </div>
+
+    {% endfor %}
+
+    <input type="submit" value="{% if edit %}Edit post{% else %}Create post{% endif %}">
+
+
+</form>
+
+{% endblock %}

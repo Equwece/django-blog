@@ -1,0 +1,34 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    <div class="title">
+        <h1>{{ post.title }}</h1>
+    </div>
+
+    {% if user.is_authenticated %}
+        <div class="edit_post">
+            <a href="{% url 'edit' post.id %}">Edit</a>
+            <a href="{% url 'delete' post.id %}">Delete</a>
+        </div>
+    {% endif %}
+
+    <div class="date">
+        <p>{{ post.date }}</p>
+    </div>
+
+    <div class="tags_container">
+        Tags:
+        {% for tag in post.tag.all %}
+        <a class="tag_link" href="{% url 'show_tag' tag.url %}">{{ tag.title }}</a>
+        {% endfor %}
+    </div>
+
+    {{ post.post_text }}
+
+    {% include "blog/comments_template.html" %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Create comment">
+    </form>
+{% endblock %}

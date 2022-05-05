@@ -1,0 +1,26 @@
+{% for comment in comments %}
+
+<div class="comments">
+    <div class="post">
+        <div class="title">
+            <a class="title_link" href="">
+                {{ comment.author }}
+            </a>
+            
+            {% if user.is_authenticated %}
+                <div class="edit_post">
+                    <a href="{% url 'delete_comment' post.id comment.id %}">Delete</a>
+                </div>
+            {% endif %}
+
+        </div>
+
+        <div class="date">{{ comment.email }}</div>
+
+        <div class="post_content">
+            {{ comment.comment_text }}
+        </div>
+
+    </div>
+</div>
+{% endfor %}

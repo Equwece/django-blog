@@ -1,0 +1,299 @@
+@media screen and (min-width: 960px){
+    .search_form {
+        margin: 0;
+        padding: 0;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 400px;
+    }
+    .search_form * {
+        margin: 0 5px;
+        height: 36px;
+        flex: 1;
+    }
+
+    .search_text {
+        height: 30px;
+        flex: 3;
+    }
+
+    .logo {
+        display: none !important;
+    }
+
+    #navbarLinks {
+        display: flex !important;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header * {
+    }
+
+    .menu_link {
+        padding: 0 15px;
+    }
+
+    .menu_link:last-of-type {
+    }
+
+/*    .posts_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+    }
+*/
+    .wrapper {
+        max-width: 1000px;
+    }
+
+}
+
+#navbarLinks {
+    display: none;
+}
+
+.search_form {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo * {
+    margin: 0 10px;
+}
+
+
+.menu_link {
+    color:red;
+    text-align: center;
+}
+
+
+.wrapper {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #373737;
+}
+
+.menu_link>a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.menu_link>a:hover {
+    text-decoration: underline;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+
+.welcome_title {
+    margin: 30px 0;
+    text-align: center;
+    flex: 1;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /* font-weight: bold; */
+}
+
+.title a {
+    flex: 1;
+}
+
+footer {
+    background-color: black;
+    border: 1px solid black;
+    width: 100%;
+    display: block;
+    height: 100px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #373737;
+}
+
+a:visited {
+    color: #373737;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.post {
+    border: 1px solid #d0d0d0;
+    padding: 10px;
+    margin-bottom: 10px;
+    min-height: 120px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/*.data_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+} */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+}
+
+button {
+}
+
+.pagination-button {
+    border: 1px solid #d0d0d0;
+    padding: 0 5px;
+    margin: 0 3px;
+    height: 50px;
+    line-height: 3;
+    text-align: center;
+    min-width: 40px
+}
+
+.pagination-button:nth-of-type(1) {
+}
+
+.pagination-button.current {
+    text-decoration: underline;
+}
+
+.content {
+    grid-column: 4 / 9;
+    grid-row: 2;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    margin: 30px auto;
+}
+
+form * {
+    margin-bottom: 10px;
+    flex: 1 30px;
+}
+
+.title_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create_post_link {
+    display: inline-block;
+    margin: 20px 0;
+    text-decoration: underline;
+}
+
+.create_form {
+    margin: 0 50px;
+    width: auto;
+}
+
+.edit_post {
+    margin: 10px 0;
+}
+
+.edit_post a:nth-of-type(1) {
+    text-decoration: underline;
+    padding-right: 5px;
+}
+
+.edit_post a:nth-of-type(2) {
+    text-decoration: underline;
+    padding-left: 5px;
+}
+
+.admin_form {
+    width: 400px;
+}
+
+.title_link {
+    font-size: 22px;
+}
+
+.post_content {
+    padding-top: 10px;
+}
+
+.date {
+    font-size: 16px;
+}
+
+.tag_link {
+    margin: 0 3px;
+    text-decoration: underline;
+}
+
+.tags_container {
+    padding-top: 10px;
+}
+
+.tag_list {
+    justify-content: space-between;
+    display: flex;
+}
+
+.action_block * {
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+.create_tag {
+    text-decoration: underline;
+    text-align: center;
+    display: inline;
+}
+
+.checkbox_block {
+}
+
+.checkbox_block div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.comments {
+    margin-top: 20px;
+}

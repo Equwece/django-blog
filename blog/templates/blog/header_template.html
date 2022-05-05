@@ -1,0 +1,30 @@
+<header>
+    <div class="logo">
+        <a href="">
+            Logo
+        </a>
+
+        <a href="javascript:void(0);" onclick="toggleNavbar()"> 
+            Menu
+        </a>
+    </div>
+    <div id="navbarLinks">
+        <p class="menu_link" href=""><a href="{% url 'home' %}">Home</a></p>
+        <p class="menu_link" href=""><a href="">About me</a></p>
+        <p class="menu_link" href=""><a href="{% url 'blog' %}">Blog</a></p>
+        <p class="menu_link" href=""><a href="{% url 'show_all_tags' %}">Tags</a></p>
+        <p class="menu_link" href=""><a href="">Other</a></p>
+        {% if user.is_authenticated %}
+        <p class="menu_link">
+        <a href="{% url 'logout' %}">Logout</a>
+        </p>
+        {% endif %}
+    </div>
+
+    <form action="{% url 'search' %}" method="GET" class="search_form">
+        <input class="search_text" type="text" name="search">
+        <input class="seacrh_button" type="submit" value="Search">
+    </form>
+
+</header>
+
